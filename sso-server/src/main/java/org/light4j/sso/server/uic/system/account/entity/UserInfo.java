@@ -15,6 +15,7 @@ public class UserInfo {
     private long userId;
     private int status;
     private String password;
+    private String email;
     private String misc;
     private int level;
     private String birthplace;

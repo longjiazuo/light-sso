@@ -8,6 +8,7 @@
 		user_id as userId,
 		status,
 		password,
+		email,
 		misc,
 		level,
 		birthplace,
@@ -19,8 +20,8 @@
   	</sql>
 
     <insert id="insert" parameterType="UserInfo">
-        INSERT INTO user_info (user_id, status, password, misc, level, birthplace, location, loan_point, lend_point, gmt_create, gmt_modified)
-        VALUES (#{userId}, #{status}, #{password}, #{misc}, #{level}, #{birthplace}, #{location}, #{loanPoint}, #{lendPoint}, now(), now());
+        INSERT INTO user_info (user_id, status, password,email, misc, level, birthplace, location, loan_point, lend_point, gmt_create, gmt_modified)
+        VALUES (#{userId}, #{status}, #{password},#{email}, #{misc}, #{level}, #{birthplace}, #{location}, #{loanPoint}, #{lendPoint}, now(), now());
     </insert>
 
     <delete id="delete" parameterType="long">
@@ -36,6 +37,9 @@
             </if>
             <if test="null != password">
                 password = #{password},
+            </if>
+             <if test="null != email">
+                email = #{email},
             </if>
             <if test="null != misc">
                 misc = #{misc},
