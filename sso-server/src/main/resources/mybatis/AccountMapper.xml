@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="org.light4j.sso.server.uic.system.account.repository.AccountDao">
+
+    <sql id="allColumns">
+		id,
+		name,
+		type,
+		gmt_create as gmtCreate,
+		gmt_modified as gmtModified
+  	</sql>
+
+    <insert id="insert" parameterType="Account" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO accounts (name, type, gmt_create, gmt_modified)
+        VALUES (#{name}, #{type}, now(), now());
+    </insert>
+
+    <insert id="importAccount" parameterType="Account">
+        INSERT INTO accounts (id, name, type, gmt_create, gmt_modified)
+        VALUES (#{id}, #{name}, #{type}, now(), now());
+    </insert>
+
+    <delete id="delete" parameterType="long">
+        DELETE FROM accounts
+        WHERE id = #{id}
+    </delete>
+
+    <select id="getAccount" resultType="Account">
+        SELECT <include refid="allColumns" />
+        FROM accounts
+        WHERE name = #{name} AND type = #{type}
+    </select>
+
+    <select id="getAccountById" parameterType="long" resultType="Account">
+        SELECT <include refid="allColumns" />
+        FROM demo_accounts
+        WHERE id = #{id}
+    </select>
+
+    <select id="getAccountsByIds" parameterType="list" resultType="Account">
+        SELECT <include refid="allColumns" />
+        FROM accounts
+        WHERE id IN
+        <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+</mapper>
