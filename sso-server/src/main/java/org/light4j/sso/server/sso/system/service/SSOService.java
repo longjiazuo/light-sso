@@ -28,7 +28,7 @@ import com.alibaba.fastjson.JSON;
 @Slf4j
 public class SSOService {
     private static final String DOMAIN_OPTION = "sso.domain";
-    private static final String DEFAULT_DOMAIN = "light4j.com";
+    private static final String DEFAULT_DOMAIN = "light4j.org";
     private static final int COOKIE_EXPIRE = 1209600;// 2 weeks
 
     private static String myDomain;

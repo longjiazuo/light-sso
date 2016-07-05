@@ -35,7 +35,7 @@
 
     <select id="getAccountById" parameterType="long" resultType="Account">
         SELECT <include refid="allColumns" />
-        FROM demo_accounts
+        FROM accounts
         WHERE id = #{id}
     </select>
 
