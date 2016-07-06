@@ -72,7 +72,8 @@ public class SSOController extends SpringBeanAutowiringSupport {
             model.addAttribute("backUrl", backUrl);
         }
 
-        return "sso/login";
+       // return "sso/login";
+        return "sso/index";
     }
 
     @RequestMapping(value = "logout", method = RequestMethod.GET)
