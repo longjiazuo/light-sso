@@ -8,7 +8,7 @@
 	<packaging>pom</packaging>
 
 	<name>light-sso</name>
-	<url>http://www.light4j.org</url>
+	<url>http://blog.longjiazuo.com</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
