@@ -2,15 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.light4j.sso</groupId>
+	<groupId>org.light4j</groupId>
 	<artifactId>light-sso</artifactId>
-	<version>1.0</version>
+	<version>${light-sso.version}</version>
 	<packaging>pom</packaging>
 
 	<name>light-sso</name>
 	<url>http://blog.longjiazuo.com</url>
 
 	<properties>
+		<light-sso.version>1.0</light-sso.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
   <modules>
