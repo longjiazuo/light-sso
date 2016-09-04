@@ -4,14 +4,14 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.light4j.sso</groupId>
+		<groupId>org.light4j</groupId>
 		<artifactId>light-sso</artifactId>
-		<version>1.0</version>
+		<version>${light-sso.version}</version>
 	</parent>
 	<artifactId>sso-server</artifactId>
 	<packaging>war</packaging>
 	<name>sso-server</name>
-	<url>http://www.light4j.org</url>
+	<url>http://blog.longjiazuo.com</url>
 	<properties>
 		<!-- 主要依赖库的版本定义 -->
 		<spring.version>4.0.0.RELEASE</spring.version>
@@ -51,9 +51,9 @@
 	<!-- 依赖项定义 -->
 	<dependencies>
 		<dependency>
-			<groupId>org.light4j.sso</groupId>
+			<groupId>org.light4j</groupId>
 			<artifactId>sso-client</artifactId>
-			<version>${sso-client.version}</version>
+			<version>${light-sso.version}</version>
 		</dependency>
 
 		<!-- mybatis -->
