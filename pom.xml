@@ -11,7 +11,7 @@
 	<url>http://blog.longjiazuo.com</url>
 
 	<properties>
-		<light-sso.version>1.0</light-sso.version>
+		<light-sso.version>1.0.0</light-sso.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
   <modules>
